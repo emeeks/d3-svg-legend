@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>D3 Visualizing Rotation</title>
+  <meta charset="utf-8" />
+</head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="legend.js"></script>
+<style>
+  body, html {
+    width:100%;
+    height:100%;
+  }
+  #vizcontainer {
+    width:100%;
+    height:100%;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<body onload="legendDemo()">
+
+<div id="vizcontainer">
+<svg></svg>
+</div>
+  <footer>
+<script>
+  function legendDemo() {
+
+  sampleNumerical = [1,2.5,5,10,20];
+  sampleThreshold=d3.scale.threshold().domain(sampleNumerical).range(colorbrewer.Reds[5]);
+  horizontalLegend = d3.svg.legend().units("Miles").cellWidth(80).cellHeight(25).inputScale(sampleThreshold).cellStepping(100);
+
+  d3.select("svg").append("g").attr("transform", "translate(50,70)").attr("class", "legend").call(horizontalLegend);
+
+  sampleCategoricalData = ["Something","Something Else", "Another", "This", "That", "Etc"]
+  sampleOrdinal = d3.scale.category20().domain(sampleCategoricalData);
+
+  verticalLegend = d3.svg.legend().labelFormat("none").cellPadding(5).orientation("vertical").units("Things in a List").cellWidth(25).cellHeight(18).inputScale(sampleOrdinal).cellStepping(10);
+
+  d3.select("svg").append("g").attr("transform", "translate(50,140)").attr("class", "legend").call(verticalLegend);
+
+  }
+</script>
+  </footer>
+</body>
+</html>
