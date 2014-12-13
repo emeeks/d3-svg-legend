@@ -24,5 +24,7 @@ Determines whether the legend is presented horizontally or vertically. See examp
 legend.**labelFormat**(*d3.format*)
 Sets the formatter for the units. Set to "none" if you want no formatter applied, otherwise pass a d3.format with the settings you want.
 
+legend.**place**(*{x: 0, y:0}*)
+Sets the initial position. Default: {x:0, y:0}. Legend is draggable thereafter 
 
 
