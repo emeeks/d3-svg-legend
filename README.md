@@ -1,7 +1,7 @@
 d3-svg-legend
 =============
 
-A simple legend created from d3 scales. You can see [an example here](http://bl.ocks.org/emeeks/8855733967174fe4b1b4). Legends have the following options:
+A simple and draggable legend created from d3 scales. You can see [an example here](http://bl.ocks.org/mpschr/129c671ee44a417c417e). Legends have the following options:
 
 legend.**inputScale**(d3.scale)
 Associates the legend with a d3 scale. Currently only tested with threshold and ordinal scales.
