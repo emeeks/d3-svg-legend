@@ -1,6 +1,8 @@
 d3-svg-legend
 =============
 
+[A much more fully-featured legend has been created by Susie Lu](https://github.com/susielu/d3-legend)
+
 A simple and draggable legend created from d3 scales. You can see [an example here](http://bl.ocks.org/mpschr/129c671ee44a417c417e). Legends have the following options:
 
 legend.**inputScale**(d3.scale)
